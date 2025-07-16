@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTMLで計算を行う</title>
+  <script>
+    function addNumbers() {
+      var exp1 = parseFloat(document.getElementById('exp1').value);
+      var exp2 = parseFloat(document.getElementById('exp2').value);
+
+      var rid1 = parseFloat(document.getElementById('rid1').value);
+      var sum1 = exp1 + exp2 + rid1;
+      var sum2 = exp1 + exp2 + rid1*0.8;
+      document.getElementById('result1').innerHTML = '通常価格：' + sum1;
+      document.getElementById('result2').innerHTML = '割引価格：' + sum2;
+    }
+  </script>
+</head>
+<body>
+  <h1>学割計算を行う</h1>
+  特急券の値段を入力：
+  <input type="text" id="exp1" placeholder="特急券の値段を入力">
+  <input type="text" id="exp2" placeholder="特急券の値段を入力">
+    <br>
+乗車券の値段を入力：
+  <input type="text" id="rid1" placeholder="乗車券の値段を入力">
+  <br>
+  <button onclick="addNumbers()">計算する</button>
+  <p id="result1"></p>
+  <p id="result2"></p>
+</body>
+</html>
